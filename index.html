@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Canva Design Master Class</title>
+<meta name="description" content="A two-day live virtual Canva design masterclass with The Elevated James, 9–10 November 2026. Only 50 seats.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --fg: #1C1230;
+  --muted: #5B4F6E;
+  --brand: #4B1C86;
+  --accent: #F7D547;
+  --surface: #F5F1FB;
+  --line: #DCD3EA;
+  --hero: #4B1C86;
+  --on-hero: #FFFFFF;
+  --on-accent: #2A0F4D;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #140A22;
+    --fg: #F3EEFB;
+    --muted: #B9ADCC;
+    --brand: #B99CF0;
+    --accent: #F7D547;
+    --surface: #22153A;
+    --line: #3A2A56;
+    --hero: #2E1462;
+    --on-hero: #F3EEFB;
+    --on-accent: #2A0F4D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #140A22;
+  --fg: #F3EEFB;
+  --muted: #B9ADCC;
+  --brand: #B99CF0;
+  --accent: #F7D547;
+  --surface: #22153A;
+  --line: #3A2A56;
+  --hero: #2E1462;
+  --on-hero: #F3EEFB;
+  --on-accent: #2A0F4D;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); }
+.page { min-height: 100%; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+.display { font-family: Poppins, system-ui, sans-serif; font-weight: 800; letter-spacing: -0.01em; text-wrap: balance; margin: 0; line-height: 1.05; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand); margin: 0 0 12px; }
+.on-hero-eyebrow { color: var(--accent); }
+.section { padding-block: 72px; }
+.section h2 { font-family: Poppins, system-ui, sans-serif; font-weight: 800; font-size: 40px; line-height: 1.1; margin: 0 0 16px; text-wrap: balance; }
+.lead { font-size: 19px; color: var(--muted); max-width: 720px; margin: 0; }
+.btn { display: inline-block; font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 17px; text-decoration: none; padding: 16px 28px; border-radius: 999px; background: var(--accent); color: var(--on-accent); border: 2px solid var(--accent); text-align: center; }
+.btn:hover { filter: brightness(0.96); }
+.btn:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.btn-ghost { background: transparent; color: var(--on-hero); border: 2px solid currentColor; }
+.btn-inverse { background: var(--on-accent); color: var(--accent); border-color: var(--on-accent); }
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.card h3 { font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 20px; line-height: 1.25; margin: 0 0 8px; }
+.card p { margin: 0; color: var(--muted); }
+.quote { font-family: Poppins, system-ui, sans-serif; font-weight: 600; font-size: 18px; line-height: 1.4; color: var(--fg); margin: 0; }
+.num { font-family: Poppins, system-ui, sans-serif; font-weight: 800; font-size: 14px; color: var(--on-accent); background: var(--accent); border-radius: 999px; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.row { display: flex; gap: 16px; align-items: flex-start; padding-block: 16px; border-top: 1px solid var(--line); }
+.row:last-child { border-bottom: 1px solid var(--line); }
+.row h3 { font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 19px; margin: 0; line-height: 1.3; }
+.row p { margin: 4px 0 0; color: var(--muted); }
+.check { color: var(--brand); font-weight: 700; flex: none; }
+.faq summary { cursor: pointer; font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 18px; padding-block: 16px; border-top: 1px solid var(--line); list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq p { margin: 0 0 16px; color: var(--muted); }
+.facts { display: grid; gap: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); border: 2px solid var(--on-hero); border-radius: 16px; overflow: hidden; }
+.fact { padding: 18px 20px; border-right: 1px solid color-mix(in srgb, var(--on-hero) 30%, transparent); }
+.fact:last-child { border-right: 0; }
+.fact span { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; }
+.fact strong { font-family: Poppins, system-ui, sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3; }
+
+/* Countdown */
+.countdown { margin-top: 40px; max-width: 760px; }
+.countdown-label { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.9; margin: 0 0 12px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tile { background: color-mix(in srgb, var(--on-hero) 10%, transparent); border: 1px solid color-mix(in srgb, var(--on-hero) 25%, transparent); border-radius: 16px; padding: 16px 8px; text-align: center; }
+.tile-num { display: block; font-family: Poppins, system-ui, sans-serif; font-weight: 800; font-size: 44px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tile-unit { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; }
+.progress { margin-top: 18px; height: 10px; border-radius: 999px; background: color-mix(in srgb, var(--on-hero) 20%, transparent); overflow: hidden; }
+.progress-bar { height: 100%; width: 0%; background: var(--accent); border-radius: 999px; transition: width 0.6s ease-out; }
+.countdown-meta { margin: 12px 0 0; font-size: 15px; opacity: 0.9; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+.countdown-live { font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 22px; margin: 0; }
+.countdown[hidden] { display: none; }
+
+.price { background: var(--accent); color: var(--on-accent); border-radius: 24px; padding: 40px; display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); align-items: center; }
+.price-amount { font-family: Poppins, system-ui, sans-serif; font-weight: 800; font-size: 96px; line-height: 1; }
+.bonus { border: 2px dashed var(--on-accent); border-radius: 16px; padding: 20px 24px; }
+.bonus strong { font-family: Poppins, system-ui, sans-serif; font-size: 22px; line-height: 1.25; display: block; }
+a.inline { color: var(--brand); font-weight: 600; }
+footer a { color: inherit; }
+.two-day { margin-top: 0; }
+
+@media (max-width: 640px) {
+  .section { padding-block: 56px; }
+  .section h2 { font-size: 30px; }
+  .price-amount { font-size: 72px; }
+  .price { padding: 28px 22px; }
+  .hero-title { font-size: 46px !important; }
+  .tile-num { font-size: 32px; }
+  .tiles { gap: 8px; }
+  .facts .fact { border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--on-hero) 30%, transparent); }
+  .facts .fact:last-child { border-bottom: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in { animation: rise 600ms ease-out both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="wrap" style="padding-block: 24px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center">
+  <div>
+    <div class="display" style="font-size: 18px; color: var(--brand)">THE ELEVATION CITADEL</div>
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted)">ENGINEERED FOR BRAND DOMINANCE</div>
+  </div>
+  <a class="btn" href="#register" style="padding: 12px 22px; font-size: 15px">Reserve my seat</a>
+</header>
+
+<section style="background: var(--hero); color: var(--on-hero)">
+  <div class="wrap hero-in" style="padding-block: 56px 72px">
+    <p class="eyebrow on-hero-eyebrow">Live virtual masterclass · 9–10 Nov 2026</p>
+    <h1 class="display hero-title" style="font-size: 76px">Canva Design <span style="color: var(--accent)">Master Class</span></h1>
+    <p style="font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 26px; margin: 16px 0 0">with The Elevated James</p>
+    <p style="font-size: 21px; line-height: 1.5; max-width: 760px; margin: 28px 0 0">Turn your raw idea into a clear brand direction and a ready-to-share promotional design, even if you are not a graphic designer.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px">
+      <a class="btn" href="#register">Reserve my seat for $5</a>
+      <a class="btn btn-ghost" href="#learn">See what you will learn</a>
+    </div>
+
+    <div class="countdown" id="countdown" aria-labelledby="cd-label">
+      <p class="countdown-label" id="cd-label">Countdown to the first session</p>
+      <div class="tiles" role="timer" aria-live="off">
+        <div class="tile"><span class="tile-num" id="cd-d">--</span><span class="tile-unit">Days</span></div>
+        <div class="tile"><span class="tile-num" id="cd-h">--</span><span class="tile-unit">Hours</span></div>
+        <div class="tile"><span class="tile-num" id="cd-m">--</span><span class="tile-unit">Minutes</span></div>
+        <div class="tile"><span class="tile-num" id="cd-s">--</span><span class="tile-unit">Seconds</span></div>
+      </div>
+      <div class="progress" aria-hidden="true"><div class="progress-bar" id="cd-bar"></div></div>
+      <p class="countdown-meta"><span id="cd-status">Counting down to 9 Nov 2026</span><span id="cd-pct"></span></p>
+    </div>
+    <noscript><p style="margin-top: 24px; font-weight: 600">The first session starts on 9 November 2026.</p></noscript>
+
+    <div class="facts" style="margin-top: 48px">
+      <div class="fact"><span>Dates</span><strong>9–10 Nov 2026</strong></div>
+      <div class="fact"><span>Time</span><strong>To be announced</strong></div>
+      <div class="fact"><span>Format</span><strong>Virtual · Google Meet</strong></div>
+      <div class="fact"><span>Seats</span><strong>Only 50</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-block: 56px 0">
+  <div class="wrap">
+    <p class="eyebrow">Who this is for</p>
+    <h2>You have the idea. The design is the missing piece.</h2>
+    <p class="lead">Built for student creators, campus founders and small-business owners who want to communicate their ideas and sell their offers without hiring a designer.</p>
+    <div class="grid" style="margin-top: 36px">
+      <div class="card"><p class="quote">"I have a big idea, but I struggle to visualise it."</p></div>
+      <div class="card"><p class="quote">"I have a product or service, but my promotional designs don't represent it well."</p></div>
+      <div class="card"><p class="quote">"I want my personal brand to look more consistent."</p></div>
+      <div class="card"><p class="quote">"I'm not ready to hire a designer, so I want to learn the basics myself."</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="learn">
+  <div class="wrap">
+    <p class="eyebrow">What you will learn</p>
+    <h2>Seven skills, one finished poster</h2>
+    <p class="lead">Every module feeds the same project, so you leave with work you can post, not just notes.</p>
+    <div style="margin-top: 36px">
+      <div class="row"><span class="num">1</span><div><h3>Design principles that matter</h3><p>Balance, hierarchy, contrast, alignment, spacing and consistency, taught through before-and-after comparisons.</p></div></div>
+      <div class="row"><span class="num">2</span><div><h3>Navigating the Canva design space</h3><p>Only the controls you need to build a real poster. No feature tour.</p></div></div>
+      <div class="row"><span class="num">3</span><div><h3>Components of a great design</h3><p>The seven parts a promotional design needs, and when each one can be left out.</p></div></div>
+      <div class="row"><span class="num">4</span><div><h3>Pinterest to poster</h3><p>Use references for direction and build an original poster from your own message.</p></div></div>
+      <div class="row"><span class="num">5</span><div><h3>Turn your AI posters into functional designs</h3><p>Use Canva's Magic Layers to make AI visuals editable, then correct the wording and add your real offer.</p></div></div>
+      <div class="row"><span class="num">6</span><div><h3>Personal branding for your startup</h3><p>Pick the niche, the personality and the three words your brand should be known for.</p></div></div>
+      <div class="row"><span class="num">7</span><div><h3>Position your brand for visibility and clients</h3><p>Turn your niche into a clear offer people can understand in one sentence.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-block: 0 72px">
+  <div class="wrap">
+    <div style="display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); align-items: start">
+      <div>
+        <p class="eyebrow">What you leave with</p>
+        <h2 style="font-size: 32px; line-height: 1.15; margin: 0 0 20px">Five things you can use the day after</h2>
+        <div class="row"><span class="check">✓</span><p style="margin: 0; color: var(--fg)">A one-sentence brand direction</p></div>
+        <div class="row"><span class="check">✓</span><p style="margin: 0; color: var(--fg)">A simple brand board with your colours and fonts</p></div>
+        <div class="row"><span class="check">✓</span><p style="margin: 0; color: var(--fg)">One finished promotional poster</p></div>
+        <div class="row"><span class="check">✓</span><p style="margin: 0; color: var(--fg)">One AI-assisted design</p></div>
+        <div class="row"><span class="check">✓</span><p style="margin: 0; color: var(--fg)">A checklist to review every future design</p></div>
+      </div>
+      <div class="card" style="padding: 28px">
+        <p class="eyebrow" style="margin-bottom: 8px">Two live days</p>
+        <h3 style="font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 20px; margin: 0 0 6px">Day 1 · Clarify and build</h3>
+        <p style="margin: 0 0 18px; color: var(--muted)">Brand direction, design principles, Canva navigation, then the promotional poster build.</p>
+        <h3 style="font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 20px; margin: 0 0 6px">Day 2 · Adapt and launch</h3>
+        <p style="margin: 0; color: var(--muted)">Pinterest to original poster, AI visuals to functional design, your independent build, then export and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="register" style="background: var(--surface); border-block: 1px solid var(--line)">
+  <div class="wrap">
+    <div class="price">
+      <div>
+        <p class="eyebrow" style="color: var(--on-accent); opacity: 0.85">Masterclass price</p>
+        <div class="price-amount">$5</div>
+        <p style="margin: 12px 0 0; font-size: 19px; font-weight: 600">For the 2-day live masterclass, plus 1 week of follow-up.</p>
+      </div>
+      <div style="display: grid; gap: 20px">
+        <div class="bonus"><strong>Bonus: free Canva Pro for 3 months</strong></div>
+        <a class="btn btn-inverse" href="#register">Reserve my seat</a>
+        <p style="margin: 0; font-size: 15px; font-weight: 600; text-align: center">Only 50 seats. Session time to be announced.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Your instructor</p>
+    <h2>The Elevated James</h2>
+    <p class="lead" style="max-width: 760px">Founder of The Elevation Citadel, a brand identity and design studio, and of Elevated Designs. Teaching beginner-friendly DIY visual branding for creators who cannot yet afford a designer.</p>
+    <p style="margin: 20px 0 0"><a class="inline" href="https://instagram.com/elevatedjamesdesigns" target="_blank" rel="noopener">See my work on Instagram: @elevatedjamesdesigns</a></p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0">
+  <div class="wrap">
+    <p class="eyebrow">Questions</p>
+    <h2>Before you reserve</h2>
+    <div class="faq" style="max-width: 820px; margin-top: 24px">
+      <details open><summary>Do I need design experience?</summary><p>No. The class is built for complete beginners. The required outcome is one polished poster for your own idea.</p></details>
+      <details><summary>Can I use AI-generated images?</summary><p>Yes, as long as you have permission to use the image. You will learn to turn an AI visual into an editable Canva design.</p></details>
+      <details><summary>Is there any follow-up after the two days?</summary><p>Yes. Your price includes one week of follow-up after the live sessions.</p></details>
+      <details><summary>Where does the class take place?</summary><p>Online on Google Meet, on 9 and 10 November 2026. The session time will be announced before the class starts.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--accent); color: var(--on-accent)">
+  <div class="wrap" style="padding-block: 56px; text-align: center">
+    <h2 class="display" style="font-size: 44px">Only 50 seats. Design your dream brand.</h2>
+    <p style="font-size: 19px; margin: 14px auto 28px; max-width: 620px">Reserve your place now, while seats are still open.</p>
+    <a class="btn btn-inverse" href="#register">Reserve my seat for $5</a>
+  </div>
+</section>
+
+<footer class="wrap" style="padding-block: 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 14px; color: var(--muted)">
+  <span>The Elevation Citadel · Connect. Craft. Elevate.</span>
+  <a href="https://instagram.com/elevatedjamesdesigns" target="_blank" rel="noopener">@elevatedjamesdesigns</a>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  // Countdown anchors. Both are fixed in Indian Standard Time (IST, UTC+05:30)
+  // so every visitor sees the same numbers.
+  // START: the timer begins at midnight today (26 Oct 2026).
+  // EVENT: the first session, 9 Nov 2026. Update to the exact session time once it is announced.
+  var START = Date.parse('2026-10-26T00:00:00+05:30');
+  var EVENT = Date.parse('2026-11-09T00:00:00+05:30');
+  var DAY = 86400000, HOUR = 3600000, MIN = 60000;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var els = { d: $('cd-d'), h: $('cd-h'), m: $('cd-m'), s: $('cd-s'), bar: $('cd-bar'), status: $('cd-status'), pct: $('cd-pct') };
+
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function render() {
+    var now = Date.now();
+    var remaining = EVENT - now;
+    var total = EVENT - START;
+    var progress = Math.min(1, Math.max(0, (now - START) / total));
+
+    els.bar.style.width = (progress * 100).toFixed(2) + '%';
+    els.pct.textContent = Math.floor(progress * 100) + '% of the way there';
+
+    if (remaining <= 0) {
+      els.d.textContent = '0';
+      els.h.textContent = '00';
+      els.m.textContent = '00';
+      els.s.textContent = '00';
+      els.status.textContent = 'The first session has started. Reserve your seat while places last.';
+      return;
+    }
+
+    els.d.textContent = String(Math.floor(remaining / DAY));
+    els.h.textContent = pad(Math.floor((remaining % DAY) / HOUR));
+    els.m.textContent = pad(Math.floor((remaining % HOUR) / MIN));
+    els.s.textContent = pad(Math.floor((remaining % MIN) / 1000));
+    els.status.textContent = 'Counting down to 9 Nov 2026 · started 26 Oct 2026 (IST)';
+  }
+
+  render();
+  setInterval(render, 1000);
+})();
+</script>
+</body>
+</html>
