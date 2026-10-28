@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Canva Design Master Class</title>
-<meta name="description" content="A two-day live virtual Canva design masterclass with The Elevated James, 9–10 November 2026. Only 50 seats.">
+<meta name="description" content="A two-day live virtual Canva design masterclass with The Elevated James, 16–17 November 2026. Only 50 seats.">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,7 +129,7 @@ footer a { color: inherit; }
 
 <section style="background: var(--hero); color: var(--on-hero)">
   <div class="wrap hero-in" style="padding-block: 56px 72px">
-    <p class="eyebrow on-hero-eyebrow">Live virtual masterclass · 9–10 Nov 2026</p>
+    <p class="eyebrow on-hero-eyebrow">Live virtual masterclass · 16–17 Nov 2026</p>
     <h1 class="display hero-title" style="font-size: 76px">Canva Design <span style="color: var(--accent)">Master Class</span></h1>
     <p style="font-family: Poppins, system-ui, sans-serif; font-weight: 700; font-size: 26px; margin: 16px 0 0">with The Elevated James</p>
     <p style="font-size: 21px; line-height: 1.5; max-width: 760px; margin: 28px 0 0">Turn your raw idea into a clear brand direction and a ready-to-share promotional design, even if you are not a graphic designer.</p>
@@ -147,12 +147,12 @@ footer a { color: inherit; }
         <div class="tile"><span class="tile-num" id="cd-s">--</span><span class="tile-unit">Seconds</span></div>
       </div>
       <div class="progress" aria-hidden="true"><div class="progress-bar" id="cd-bar"></div></div>
-      <p class="countdown-meta"><span id="cd-status">Counting down to 9 Nov 2026, 9:00 PM IST</span><span id="cd-pct"></span></p>
+      <p class="countdown-meta"><span id="cd-status">Counting down to 16 Nov 2026, 9:00 PM IST</span><span id="cd-pct"></span></p>
     </div>
-    <noscript><p style="margin-top: 24px; font-weight: 600">The first session starts on 9 November 2026 at 9:00 PM IST.</p></noscript>
+    <noscript><p style="margin-top: 24px; font-weight: 600">The first session starts on 16 November 2026 at 9:00 PM IST.</p></noscript>
 
     <div class="facts" style="margin-top: 48px">
-      <div class="fact"><span>Dates</span><strong>9–10 Nov 2026</strong></div>
+      <div class="fact"><span>Dates</span><strong>16–17 Nov 2026</strong></div>
       <div class="fact"><span>Time</span><strong>9:00 PM (IST)</strong></div>
       <div class="fact"><span>Format</span><strong>Virtual · Google Meet</strong></div>
       <div class="fact"><span>Seats</span><strong>Only 50</strong></div>
@@ -249,7 +249,7 @@ footer a { color: inherit; }
       <details open><summary>Do I need design experience?</summary><p>No. The class is built for complete beginners. The required outcome is one polished poster for your own idea.</p></details>
       <details><summary>Can I use AI-generated images?</summary><p>Yes, as long as you have permission to use the image. You will learn to turn an AI visual into an editable Canva design.</p></details>
       <details><summary>Is there any follow-up after the two days?</summary><p>Yes. Your price includes one week of follow-up after the live sessions.</p></details>
-      <details><summary>Where does the class take place?</summary><p>Online on Google Meet, on 9 and 10 November 2026. Sessions start at 9:00 PM IST (India Standard Time).</p></details>
+      <details><summary>Where does the class take place?</summary><p>Online on Google Meet, on 16 and 17 November 2026. Sessions start at 9:00 PM IST (India Standard Time).</p></details>
     </div>
   </div>
 </section>
@@ -274,9 +274,9 @@ footer a { color: inherit; }
   // Countdown anchors. Both are fixed in Indian Standard Time (IST, UTC+05:30)
   // so every visitor sees the same numbers.
   // START: the timer begins at midnight today (26 Oct 2026).
-  // EVENT: the first session, 9 Nov 2026 at 9:00 PM IST.
+  // EVENT: the first session, 16 Nov 2026 at 9:00 PM IST.
   var START = Date.parse('2026-10-26T00:00:00+05:30');
-  var EVENT = Date.parse('2026-11-09T21:00:00+05:30');
+  var EVENT = Date.parse('2026-11-16T21:00:00+05:30');
   var DAY = 86400000, HOUR = 3600000, MIN = 60000;
 
   var $ = function (id) { return document.getElementById(id); };
@@ -306,7 +306,7 @@ footer a { color: inherit; }
     els.h.textContent = pad(Math.floor((remaining % DAY) / HOUR));
     els.m.textContent = pad(Math.floor((remaining % HOUR) / MIN));
     els.s.textContent = pad(Math.floor((remaining % MIN) / 1000));
-    els.status.textContent = 'Counting down to 9 Nov 2026, 9:00 PM IST';
+    els.status.textContent = 'Counting down to 16 Nov 2026, 9:00 PM IST';
   }
 
   render();
