@@ -155,13 +155,13 @@ footer a { color: inherit; }
         <div class="tile"><span class="tile-num" id="cd-s">--</span><span class="tile-unit">Seconds</span></div>
       </div>
       <div class="progress" aria-hidden="true"><div class="progress-bar" id="cd-bar"></div></div>
-      <p class="countdown-meta"><span id="cd-status">Counting down to 9 Nov 2026</span><span id="cd-pct"></span></p>
+      <p class="countdown-meta"><span id="cd-status">Counting down to 9 Nov 2026, 9:00 PM IST</span><span id="cd-pct"></span></p>
     </div>
-    <noscript><p style="margin-top: 24px; font-weight: 600">The first session starts on 9 November 2026.</p></noscript>
+    <noscript><p style="margin-top: 24px; font-weight: 600">The first session starts on 9 November 2026 at 9:00 PM IST.</p></noscript>
 
     <div class="facts" style="margin-top: 48px">
       <div class="fact"><span>Dates</span><strong>9–10 Nov 2026</strong></div>
-      <div class="fact"><span>Time</span><strong>To be announced</strong></div>
+      <div class="fact"><span>Time</span><strong>9:00 PM (IST)</strong></div>
       <div class="fact"><span>Format</span><strong>Virtual · Google Meet</strong></div>
       <div class="fact"><span>Seats</span><strong>Only 50</strong></div>
     </div>
@@ -234,7 +234,7 @@ footer a { color: inherit; }
         <div class="bonus"><strong>Bonus: free Canva Pro for 3 months</strong></div>
         <a class="btn btn-inverse" href="#register">Reserve my seat</a>
         <a class="btn btn-inverse" href="https://chat.whatsapp.com/KuGogC44DhU8CZSrGP7uja?s=cl&p=a&mlu=4&ilr=4&iam=2" target="_blank" rel="noopener">Join the community group</a>
-        <p style="margin: 0; font-size: 15px; font-weight: 600; text-align: center">Only 50 seats. Session time to be announced.</p>
+        <p style="margin: 0; font-size: 15px; font-weight: 600; text-align: center">Only 50 seats. Sessions start at 9:00 PM IST.</p>
       </div>
     </div>
   </div>
@@ -244,7 +244,7 @@ footer a { color: inherit; }
   <div class="wrap">
     <p class="eyebrow">Your instructor</p>
     <h2>The Elevated James</h2>
-    <p class="lead" style="max-width: 760px">Founder of The Elevation Citadel, a brand identity and design studio, and of Elevated Designs. Teaching beginner-friendly DIY visual branding for creators who cannot yet afford a designer.</p>
+    <p class="lead" style="max-width: 760px">Founder of The Elevation Citadel, a brand identity and design studio, and of Elevated Designs. Teaching beginner-friendly DIY visual branding for creators who cannot yet afford a designer. Three years of earning with Canva.</p>
     <p style="margin: 20px 0 0"><a class="inline" href="https://instagram.com/elevatedjamesdesigns" target="_blank" rel="noopener">See my work on Instagram: @elevatedjamesdesigns</a></p>
   </div>
 </section>
@@ -257,7 +257,7 @@ footer a { color: inherit; }
       <details open><summary>Do I need design experience?</summary><p>No. The class is built for complete beginners. The required outcome is one polished poster for your own idea.</p></details>
       <details><summary>Can I use AI-generated images?</summary><p>Yes, as long as you have permission to use the image. You will learn to turn an AI visual into an editable Canva design.</p></details>
       <details><summary>Is there any follow-up after the two days?</summary><p>Yes. Your price includes one week of follow-up after the live sessions.</p></details>
-      <details><summary>Where does the class take place?</summary><p>Online on Google Meet, on 9 and 10 November 2026. The session time will be announced before the class starts.</p></details>
+      <details><summary>Where does the class take place?</summary><p>Online on Google Meet, on 9 and 10 November 2026. Sessions start at 9:00 PM IST (India Standard Time).</p></details>
     </div>
   </div>
 </section>
@@ -282,9 +282,9 @@ footer a { color: inherit; }
   // Countdown anchors. Both are fixed in Indian Standard Time (IST, UTC+05:30)
   // so every visitor sees the same numbers.
   // START: the timer begins at midnight today (26 Oct 2026).
-  // EVENT: the first session, 9 Nov 2026. Update to the exact session time once it is announced.
+  // EVENT: the first session, 9 Nov 2026 at 9:00 PM IST.
   var START = Date.parse('2026-10-26T00:00:00+05:30');
-  var EVENT = Date.parse('2026-11-09T00:00:00+05:30');
+  var EVENT = Date.parse('2026-11-09T21:00:00+05:30');
   var DAY = 86400000, HOUR = 3600000, MIN = 60000;
 
   var $ = function (id) { return document.getElementById(id); };
@@ -314,7 +314,7 @@ footer a { color: inherit; }
     els.h.textContent = pad(Math.floor((remaining % DAY) / HOUR));
     els.m.textContent = pad(Math.floor((remaining % HOUR) / MIN));
     els.s.textContent = pad(Math.floor((remaining % MIN) / 1000));
-    els.status.textContent = 'Counting down to 9 Nov 2026 · started 26 Oct 2026 (IST)';
+    els.status.textContent = 'Counting down to 9 Nov 2026, 9:00 PM IST';
   }
 
   render();

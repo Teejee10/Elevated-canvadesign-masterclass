@@ -13,10 +13,10 @@ The two dates sit at the top of the `<script>` block in `index.html`:
 
 ```js
 var START = Date.parse('2026-10-26T00:00:00+05:30');  // timer start
-var EVENT = Date.parse('2026-11-09T00:00:00+05:30');  // first session
+var EVENT = Date.parse('2026-11-09T21:00:00+05:30');  // first session, 9:00 PM IST
 ```
 
-Once the session time is announced, set `EVENT` to the exact start time, for example `2026-11-09T19:00:00+05:30`.
+If the session time changes, update `EVENT` and the "9:00 PM IST" wording on the page.
 
 ## Before going live
 
